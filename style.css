@@ -1,0 +1,395 @@
+/* Variables globales */
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #313030;
+    --color-de-link: #ffffff;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.navegacion__lista {
+    display: none;
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: #141414;
+    
+}
+
+.presentacion__foto {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.presentacion__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+    color: #f0f0f0;
+}
+
+.presentacion__subtitulo {
+    color: rgb(221, 221, 221);
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+.redes {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.redes__img img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+    padding: 2rem;
+    text-align: center;
+}
+
+.sobre-mi__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-mi__texto {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.sobre-mi__firma {
+    margin-top: 2rem;
+    width: 100px;
+    height: auto;
+}
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.habilidades__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.habilidades__lista {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidades__icono {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.habilidades__nombre {
+    font-size: 1rem;
+    color: #333;
+}
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.aficiones__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.aficiones__lista {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.aficiones__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aficiones__icono {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.aficiones__nombre {
+    font-size: 1rem;
+    color: #333;
+}
+
+/*------------------------------ Sección de Formación académica --------------------------------*/
+.formacion {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.formacion__titulo {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.formacion__lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre los elementos de la lista */
+}
+
+/* ------------------------------ Sección de Formación académica -------------------------------- */
+.formacion__elemento {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Suaviza la transición del tamaño */
+}
+
+/* ------------------------------ Responsividad para Pantallas Grandes -------------------------------- */
+@media (min-width: 768px) {
+    .formacion__elemento {
+        width: 45%;
+    }
+}
+
+.formacion__icono {
+    width: 60px;
+    margin-right: 1.5rem;
+}
+
+.formacion__nombre {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.formacion__detalle {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+/* ------------------------------ Responsividad para Pantallas Grandes -------------------------------- */
+@media (min-width: 768px) {
+    .formacion__lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem; /* Más espacio entre elementos en pantallas grandes */
+    }
+
+    .formacion__elemento {
+        width: 45%; /* Ancho del 45% para que quepan dos elementos por fila */
+    }
+}
+
+
+
+
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos {
+    padding: 2rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centramos los elementos horizontalmente */
+    justify-content: center; /* Centramos los elementos verticalmente */
+    text-align: center;
+}
+
+.proyectos__titulo {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.proyectos__contenedor {
+    background-color: #f0f0f0;
+    padding: 2rem; /* Aumentamos el padding para más espacio interior */
+    margin-bottom: 1.5rem; /* Ajuste de margen inferior */
+    width: 100%;
+    max-width: 800px; /* Definimos un ancho máximo para evitar que se extienda demasiado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añadimos una sombra para darle profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.proyectos__imagen {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantendrá la proporción original */
+    max-width: 400px; /* Limita el ancho máximo de la imagen */
+    border-radius: 8px; /* Añade bordes redondeados a las imágenes */
+    margin-bottom: 1rem; /* Añade espacio inferior entre la imagen y el título */
+    object-fit: cover; /* Cubre el área disponible sin deformar la imagen */
+}
+
+.proyectos__nombre {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.proyectos__descripcion {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+.contacto {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contacto__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contacto__formulario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto__campo {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto__campo--textarea {
+    height: 150px;
+}
+
+.contacto__boton {
+    background-color: #333;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}
